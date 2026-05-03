@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "pen-to-square.svg",
+      "idiom": "universal"
+    }
+  ]
+}

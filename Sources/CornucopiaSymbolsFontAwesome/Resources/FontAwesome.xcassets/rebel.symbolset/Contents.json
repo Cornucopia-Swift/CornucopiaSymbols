@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "rebel.svg",
+      "idiom": "universal"
+    }
+  ]
+}

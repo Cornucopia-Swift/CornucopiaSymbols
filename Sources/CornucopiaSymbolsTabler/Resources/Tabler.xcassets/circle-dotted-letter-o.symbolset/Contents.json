@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "circle-dotted-letter-o.svg",
+      "idiom": "universal"
+    }
+  ]
+}

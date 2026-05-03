@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "shape-square-plus.svg",
+      "idiom": "universal"
+    }
+  ]
+}

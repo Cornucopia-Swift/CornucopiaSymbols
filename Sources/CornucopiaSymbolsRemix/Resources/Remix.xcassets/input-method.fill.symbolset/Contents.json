@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "input-method.fill.svg",
+      "idiom": "universal"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+# Build products
+.build/
+.swiftpm/
+DerivedData/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# Built menu-bar app bundle (produced by Scripts/build-app.sh)
+SymbolBrowser.app/
+
+# Vendor: re-cloned by Scripts/sync-symbols.sh
+Vendor/
+
+# macOS
+.DS_Store
+
+# Editors
+*.swp
+.vscode/

@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "device-cctv-off.svg",
+      "idiom": "universal"
+    }
+  ]
+}

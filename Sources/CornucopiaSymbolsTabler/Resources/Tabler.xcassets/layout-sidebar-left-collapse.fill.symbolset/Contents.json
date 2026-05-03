@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "layout-sidebar-left-collapse.fill.svg",
+      "idiom": "universal"
+    }
+  ]
+}

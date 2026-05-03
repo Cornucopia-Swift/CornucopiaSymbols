@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "speedboat.fill.svg",
+      "idiom": "universal"
+    }
+  ]
+}

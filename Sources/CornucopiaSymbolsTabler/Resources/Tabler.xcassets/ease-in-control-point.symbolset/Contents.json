@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "ease-in-control-point.svg",
+      "idiom": "universal"
+    }
+  ]
+}

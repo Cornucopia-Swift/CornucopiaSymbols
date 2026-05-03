@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "christmas-ball.svg",
+      "idiom": "universal"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "sort-descending-letters.svg",
+      "idiom": "universal"
+    }
+  ]
+}

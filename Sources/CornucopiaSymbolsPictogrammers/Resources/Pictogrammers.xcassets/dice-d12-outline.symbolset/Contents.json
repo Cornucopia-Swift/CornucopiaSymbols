@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "dice-d12-outline.svg",
+      "idiom": "universal"
+    }
+  ]
+}

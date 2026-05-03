@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "pyramid-off.svg",
+      "idiom": "universal"
+    }
+  ]
+}

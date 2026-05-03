@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "vector-union.svg",
+      "idiom": "universal"
+    }
+  ]
+}

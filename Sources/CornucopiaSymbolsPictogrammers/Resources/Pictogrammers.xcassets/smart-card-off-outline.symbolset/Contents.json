@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "smart-card-off-outline.svg",
+      "idiom": "universal"
+    }
+  ]
+}

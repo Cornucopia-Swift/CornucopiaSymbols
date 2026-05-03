@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "palette-swatch-outline.svg",
+      "idiom": "universal"
+    }
+  ]
+}

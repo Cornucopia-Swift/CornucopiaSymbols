@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "emoticon-wink-outline.svg",
+      "idiom": "universal"
+    }
+  ]
+}

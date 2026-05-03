@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "cart-off.svg",
+      "idiom": "universal"
+    }
+  ]
+}

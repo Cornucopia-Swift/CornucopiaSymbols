@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "music-up.svg",
+      "idiom": "universal"
+    }
+  ]
+}

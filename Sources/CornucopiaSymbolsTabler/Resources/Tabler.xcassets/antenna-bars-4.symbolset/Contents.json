@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "antenna-bars-4.svg",
+      "idiom": "universal"
+    }
+  ]
+}

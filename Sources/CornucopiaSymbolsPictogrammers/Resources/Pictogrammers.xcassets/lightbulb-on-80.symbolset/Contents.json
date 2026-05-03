@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "lightbulb-on-80.svg",
+      "idiom": "universal"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "npm.svg",
+      "idiom": "universal"
+    }
+  ]
+}

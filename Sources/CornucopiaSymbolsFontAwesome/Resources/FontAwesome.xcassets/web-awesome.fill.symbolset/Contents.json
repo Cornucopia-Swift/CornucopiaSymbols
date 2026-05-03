@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "web-awesome.fill.svg",
+      "idiom": "universal"
+    }
+  ]
+}

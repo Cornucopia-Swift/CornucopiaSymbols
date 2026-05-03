@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "down-left-and-up-right-to-center.svg",
+      "idiom": "universal"
+    }
+  ]
+}

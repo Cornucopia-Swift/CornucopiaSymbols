@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "storefront-minus-outline.svg",
+      "idiom": "universal"
+    }
+  ]
+}

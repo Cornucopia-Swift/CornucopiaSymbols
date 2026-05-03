@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "bike-pedal-mountain.svg",
+      "idiom": "universal"
+    }
+  ]
+}

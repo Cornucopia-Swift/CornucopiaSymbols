@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "crop-landscape.fill.svg",
+      "idiom": "universal"
+    }
+  ]
+}

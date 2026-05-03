@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "fullscreen-exit.fill.svg",
+      "idiom": "universal"
+    }
+  ]
+}

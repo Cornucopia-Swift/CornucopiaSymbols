@@ -1,0 +1,12 @@
+{
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "symbols": [
+    {
+      "filename": "image-filter-center-focus-strong-outline.svg",
+      "idiom": "universal"
+    }
+  ]
+}
