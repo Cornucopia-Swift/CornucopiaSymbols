@@ -9,7 +9,7 @@ struct SymbolBrowserApp: App {
         MenuBarExtra("CornucopiaSymbols", systemImage: "square.grid.3x3.fill") {
             BrowserContentView()
                 .environmentObject(catalog)
-                .frame(width: 720, height: 520)
+                .frame(width: 820, height: 520)
         }
         .menuBarExtraStyle(.window)
     }

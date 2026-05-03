@@ -19,6 +19,7 @@ final class SymbolCatalog: ObservableObject {
         let id: String          // setName
         let displayName: String
         let count: Int
+        let homepageURL: URL
     }
 
     let sets: [SetInfo]
@@ -30,7 +31,7 @@ final class SymbolCatalog: ObservableObject {
         var bySet: [String: [SymbolEntry]] = [:]
         var infos: [SetInfo] = []
 
-        func ingest<S: CornucopiaSymbol>(_ type: S.Type, displayName: String) {
+        func ingest<S: CornucopiaSymbol>(_ type: S.Type, displayName: String, homepage: String) {
             let cases = Array(type.allCases)
             let entries = cases.map { c in
                 SymbolEntry(
@@ -43,16 +44,21 @@ final class SymbolCatalog: ObservableObject {
             }
             allEntries.append(contentsOf: entries)
             bySet[type.setName] = entries
-            infos.append(.init(id: type.setName, displayName: displayName, count: entries.count))
+            infos.append(.init(
+                id: type.setName,
+                displayName: displayName,
+                count: entries.count,
+                homepageURL: URL(string: homepage)!
+            ))
         }
 
-        ingest(Feather.self,        displayName: "Feather")
-        ingest(Heroicons.self,      displayName: "Heroicons")
-        ingest(Lucide.self,         displayName: "Lucide")
-        ingest(FontAwesome.self,    displayName: "Font Awesome")
-        ingest(Remix.self,          displayName: "Remix")
-        ingest(Tabler.self,         displayName: "Tabler")
-        ingest(Pictogrammers.self,  displayName: "Pictogrammers")
+        ingest(Feather.self,        displayName: "Feather",       homepage: "https://feathericons.com/")
+        ingest(Heroicons.self,      displayName: "Heroicons",     homepage: "https://heroicons.com/")
+        ingest(Lucide.self,         displayName: "Lucide",        homepage: "https://lucide.dev/")
+        ingest(FontAwesome.self,    displayName: "Font Awesome",  homepage: "https://fontawesome.com/")
+        ingest(Remix.self,          displayName: "Remix",         homepage: "https://remixicon.com/")
+        ingest(Tabler.self,         displayName: "Tabler",        homepage: "https://tabler.io/icons")
+        ingest(Pictogrammers.self,  displayName: "Pictogrammers", homepage: "https://pictogrammers.com/library/mdi/")
 
         self.entries = allEntries
         self.entriesBySet = bySet

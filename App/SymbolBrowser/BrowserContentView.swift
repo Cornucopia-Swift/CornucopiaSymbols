@@ -16,7 +16,7 @@ struct BrowserContentView: View {
                 Divider()
                 HSplitView {
                     SymbolGridView(entries: filtered, selection: $selectedEntry)
-                        .frame(minWidth: 320)
+                        .frame(minWidth: 420)
                     SymbolDetailView(entry: selectedEntry)
                         .frame(minWidth: 160, idealWidth: 175, maxWidth: 210)
                 }
