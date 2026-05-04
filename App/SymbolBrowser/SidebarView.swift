@@ -4,6 +4,12 @@ struct SidebarView: View {
 
     @EnvironmentObject private var catalog: SymbolCatalog
     @Binding var selectedSet: String?
+    let onInteraction: () -> Void
+
+    init(selectedSet: Binding<String?>, onInteraction: @escaping () -> Void = {}) {
+        _selectedSet = selectedSet
+        self.onInteraction = onInteraction
+    }
 
     var body: some View {
         VStack(spacing: 0) {
@@ -36,6 +42,7 @@ struct SidebarView: View {
                 .help(selectedSetInfo.homepageURL.absoluteString)
             }
         }
+        .simultaneousGesture(TapGesture().onEnded(onInteraction))
         .frame(minWidth: 170)
     }
 

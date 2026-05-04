@@ -6,16 +6,23 @@ struct BrowserContentView: View {
     @State private var selectedSet: String? = nil
     @State private var query: String = ""
     @State private var selectedEntry: SymbolEntry? = nil
+    @State private var isGridKeyboardFocused = false
 
     var body: some View {
         HSplitView {
-            SidebarView(selectedSet: $selectedSet)
+            SidebarView(selectedSet: $selectedSet) {
+                isGridKeyboardFocused = false
+            }
                 .frame(minWidth: 120, idealWidth: 130, maxWidth: 160)
             VStack(spacing: 0) {
                 SearchBarView(query: $query, resultCount: filtered.count)
                 Divider()
                 HSplitView {
-                    SymbolGridView(entries: filtered, selection: $selectedEntry)
+                    SymbolGridView(
+                        entries: filtered,
+                        selection: $selectedEntry,
+                        isKeyboardFocused: $isGridKeyboardFocused
+                    )
                         .frame(minWidth: 420)
                     SymbolDetailView(entry: selectedEntry)
                         .frame(minWidth: 160, idealWidth: 175, maxWidth: 210)
@@ -26,7 +33,10 @@ struct BrowserContentView: View {
             if selectedEntry == nil { selectedEntry = filtered.first }
         }
         .onChange(of: query) { _ in selectedEntry = filtered.first }
-        .onChange(of: selectedSet) { _ in selectedEntry = filtered.first }
+        .onChange(of: selectedSet) { _ in
+            isGridKeyboardFocused = false
+            selectedEntry = filtered.first
+        }
     }
 
     private var filtered: [SymbolEntry] {
