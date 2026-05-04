@@ -91,6 +91,18 @@ import CornucopiaSymbolsFeather
 let img = NSImage(symbol: Feather.alertTriangle)
 ```
 
+### API scope
+
+CornucopiaSymbols intentionally keeps the public convenience surface narrow for
+now. The stable core is the typed symbol enums plus direct `Image`, `UIImage`,
+and `NSImage` constructors. SFSafeSymbols also offers conveniences for views such
+as `Label`, `Button`, `Tab`, `MenuBarExtra`, and `ContentUnavailableView`, but we
+only add those here once a real call site needs them.
+
+Some SFSafeSymbols APIs wrap SF-symbol-specific system image initializers and do
+not map cleanly to package asset catalogs. Those should be verified on the target
+platform before being mirrored.
+
 ## Naming
 
 Upstream filenames use `kebab-case` (and Font Awesome adds `.fill` suffixes for
