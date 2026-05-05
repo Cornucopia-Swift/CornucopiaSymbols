@@ -4,12 +4,7 @@ struct SidebarView: View {
 
     @EnvironmentObject private var catalog: SymbolCatalog
     @Binding var selectedSet: String?
-    let onInteraction: () -> Void
-
-    init(selectedSet: Binding<String?>, onInteraction: @escaping () -> Void = {}) {
-        _selectedSet = selectedSet
-        self.onInteraction = onInteraction
-    }
+    @FocusState.Binding var focus: BrowserFocus?
 
     var body: some View {
         VStack(spacing: 0) {
@@ -42,7 +37,7 @@ struct SidebarView: View {
                 .help(selectedSetInfo.homepageURL.absoluteString)
             }
         }
-        .simultaneousGesture(TapGesture().onEnded(onInteraction))
+        .simultaneousGesture(TapGesture().onEnded { focus = .sidebar })
         .frame(minWidth: 170)
     }
 

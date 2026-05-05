@@ -4,6 +4,7 @@ struct SearchBarView: View {
 
     @Binding var query: String
     let resultCount: Int
+    @FocusState.Binding var focus: BrowserFocus?
 
     var body: some View {
         HStack(spacing: 8) {
@@ -11,6 +12,7 @@ struct SearchBarView: View {
             TextField("Search symbol name", text: $query)
                 .textFieldStyle(.plain)
                 .font(.body)
+                .focused($focus, equals: .search)
             if !query.isEmpty {
                 Button {
                     query = ""

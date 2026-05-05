@@ -4,8 +4,7 @@ struct SymbolGridView: View {
 
     let entries: [SymbolEntry]
     @Binding var selection: SymbolEntry?
-    @Binding var isKeyboardFocused: Bool
-    @FocusState private var hasKeyboardFocus: Bool
+    @FocusState.Binding var focus: BrowserFocus?
     @State private var scrollTargetID: SymbolEntry.ID?
 
     private let columns = [GridItem(.adaptive(minimum: 92, maximum: 110), spacing: 6)]
@@ -25,25 +24,17 @@ struct SymbolGridView: View {
                 }
                 .contentShape(Rectangle())
                 .focusable()
-                .focused($hasKeyboardFocus)
-                .onTapGesture { focusGrid() }
+                .focused($focus, equals: .grid)
+                .onTapGesture { focus = .grid }
                 .onMoveCommand { direction in
                     moveSelection(direction, columnCount: columnCount(for: geometry.size.width))
-                }
-                .onChange(of: isKeyboardFocused) { focused in
-                    hasKeyboardFocus = focused
                 }
                 .onChange(of: scrollTargetID) { targetID in
                     guard let targetID else { return }
                     withAnimation(.easeOut(duration: 0.12)) {
-                        scrollProxy.scrollTo(targetID, anchor: .center)
+                        scrollProxy.scrollTo(targetID, anchor: nil)
                     }
                     scrollTargetID = nil
-                }
-                .onAppear {
-                    if isKeyboardFocused {
-                        hasKeyboardFocus = true
-                    }
                 }
             }
         }
@@ -52,12 +43,7 @@ struct SymbolGridView: View {
     private func select(_ entry: SymbolEntry) {
         selection = entry
         scrollTargetID = entry.id
-        focusGrid()
-    }
-
-    private func focusGrid() {
-        isKeyboardFocused = true
-        hasKeyboardFocus = true
+        focus = .grid
     }
 
     private func moveSelection(_ direction: MoveCommandDirection, columnCount: Int) {
